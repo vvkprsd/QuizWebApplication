@@ -1,0 +1,15 @@
+@import "./vars.scss";
+
+
+body {
+    font-family: monoscape;
+    font-display: white;
+    background: linear-gradient(0deg, $primary , $accent);
+    color: $foreground;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100vh;
+
+}

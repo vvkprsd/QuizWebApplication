@@ -1,0 +1,261 @@
+@import "../../styles/vars.scss";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.quiz-container {
+    background: $bg;
+    border-radius: 5px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin: 50px auto;
+        padding: 20px;
+        max-height: 90vh;
+    }
+
+    .active-question-no {
+        font-size: 26px;
+        font-weight: 500;
+        color: $primary;
+
+        @media (max-width: 767px) {
+            font-size: 22px;
+        }
+    }
+
+    .total-questions {
+        font-size: 16px;
+        font-weight: 500;
+        color: $disabled;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    ul {
+        margin-top: 20px;
+        margin-left: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @media (max-width: 767px) {
+            margin-left: 0;
+        }
+
+        li {
+            background: $bg;
+            border: 1px solid $disabled;
+            border-radius: 16px;
+            padding: 12px 18px;
+            margin-top: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+
+            &.selected-answer {
+                background: $primary;
+                border: 1px solid $accent;
+                color: $bg;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                padding: 10px 14px;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 767px) {
+            justify-content: center;
+        }
+    }
+
+    button {
+        background: $accent;
+        border-radius: 9px;
+        font-size: 18px;
+        color: $bg;
+        padding: 10px 36px;
+        outline: none;
+        border: none;
+        margin-top: 14px;
+        cursor: pointer;
+
+        &:disabled {
+            background: $bg-accent;
+            color: $disabled;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            padding: 8px 28px;
+            margin-top: 12px;
+        }
+    }
+
+    .result {
+        background: $bg;
+        border-radius: 16px;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        
+        p {
+            color: green;
+            font-size: 25px;
+            /* padding: 0%; */
+            font-weight: 500;
+            /* margin: 2px 0; */
+            margin-top: -15px;
+
+        //     span {
+        //         color: $primary;
+        //         font-size: 20px;
+
+        }
+
+
+        h3 {
+            font-size: 25px;
+            letter-spacing: 1.0px;
+            margin-top: 0;
+
+            @media (max-width: 767px) {
+                font-size: 25px;
+            }
+        }
+
+        // p {
+        //     font-size: 16px;
+        //     padding: 0%;
+        //     font-weight: 500;
+        //     margin: 2px 0;
+
+        //     @media (max-width: 767px) {
+        //         font-size: 14px;
+        //         margin: 2px 0;
+        //     }
+
+        //     span {
+        //         color: $primary;
+        //         font-size: 20px;
+
+        //         @media (max-width: 767px) {
+        //             font-size: 18px;
+        //         }
+        //     }
+        // }
+
+        h4 {
+            font-size: 24px;
+            margin-top: 22px;
+
+            @media (max-width: 767px) {
+                font-size: 20px;
+                margin-top: -20px;
+                
+            }
+        }
+
+        ul {
+            text-align: left;
+            padding-left: 0;
+
+
+            li {
+                background: $bg;
+                border: 1px solid $disabled;
+                border-radius: 16px;
+                padding: 10px 18px;
+                margin-top: 14px;
+                list-style-type: none;
+                font-size: 16px;
+                display: block;
+
+                @media (max-width: 767px) {
+                    margin-top: 12px;
+                    padding: 12px 14px;
+                    font-size: 14px;
+                    display: block;
+                }
+
+                .question,
+                .your-answer,
+                .correct-answer {
+
+                    margin-bottom: 6px;
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
+
+                .question span {
+                    color: $foreground;
+                }
+
+                .your-answer span {
+
+                    color: red;
+                }
+
+                .correct-answer span {
+                    color: $accent;
+
+                }
+            }
+        }
+
+        button {
+            background: $accent;
+            color: $bg;
+            font-size: 20px;
+            padding: 10px 36px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-top: 22px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+                padding: 8px 28px;
+                margin-top: 18px;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,63 @@
+/* Default styles for larger screens */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    color: #f6f6f6;
+    padding: 20px 0;
+  }
+  
+  .quiz {
+    font-size: 20px;
+    color: #b1adad;
+  }
+  
+  #root {
+    flex-grow: 1;
+  }
+  
+  footer {
+    color: #390c74;
+    padding: 50px;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #70a7e9;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+    .title {
+      font-size: 25px;
+      padding: 15px 0;
+    }
+  
+    .quiz {
+      font-size: 18px;
+    }
+  
+    footer {
+      font-size: 14px;
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+  }
